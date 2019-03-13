@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-csv_budget = pd.read_csv("../Resources/budget_data.csv",parse_dates=True)
+budget = pd.read_csv("../Resources/budget_data.csv",parse_dates=True)
 
 def currency(amount):
     if amount >= 0:
@@ -11,7 +11,7 @@ def currency(amount):
 
 #[0] = date [1]= gain/loss
 def Financial_Analysis(budget):
-
+    #proloss = budget.iloc[:, 1]
     date = budget["Date"]
     proloss = budget["Profit/Losses"]
     
@@ -36,4 +36,11 @@ def Financial_Analysis(budget):
     print(f"Greatest Increase: {currency(greatest_profit)}")
     print(f"Greatest Decrease: {currency(greatest_loss)}")
 
-Financial_Analysis(csv_budget)
+with open(csvpath, 'r') as csvfile:
+
+    csvreader = csv.reader(csvfile, delimiter=',')
+
+    header = next(csvreader)
+
+    for row in csvreader:
+       Financial_Analysis(row)
