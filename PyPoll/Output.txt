@@ -1,0 +1,14 @@
+Total Votes: 3521001
+The Candidates: ['Khan' 'Correy' 'Li' "O'Tooley"]
+Total Percent: Khan        63.000011
+Correy      19.999994
+Li          13.999996
+O'Tooley     2.999999
+Name: Candidate, dtype: float64
+Vote Count: Khan        2218231
+Correy       704200
+Li           492940
+O'Tooley     105630
+Name: Candidate, dtype: int64
+Popular Vote: Khan    2218231
+Name: Candidate, dtype: int64
