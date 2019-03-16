@@ -1,4 +1,7 @@
+Election Results
+----------------------------
 Total Votes: 3521001
+----------------------------
 The Candidates: ['Khan' 'Correy' 'Li' "O'Tooley"]
 Total Percent: Khan        63.000011
 Correy      19.999994

@@ -19,17 +19,23 @@ def Analyze_Data(voter_data):
     #popular vote winner
     popular_vote = vote_count[:1]
     
+    print("Election Results")
+    print("----------------------------")
     print(f"Total Votes: {total_votes}")
-    print(f"The Candidates: {unique_candidates}")
-    print(f"Total Percent: {pct_count}")
-    print(f"Vote Count: {vote_count}")
-    print(f"Popular Vote: {popular_vote}")
+    print("----------------------------")    
+    print(f"The Candidates: {str(unique_candidates)}")
+    print(f"Total Percent: {str(pct_count)}")
+    print(f"Vote Count: {str(vote_count)}")
+    print(f"Popular Vote: {str(popular_vote)}")
     
     with open("Output.txt", "w") as text_file:
-        print(f"Total Votes: {total_votes}", file=text_file)
-        print(f"The Candidates: {unique_candidates}", file=text_file)
-        print(f"Total Percent: {pct_count}", file=text_file)
-        print(f"Vote Count: {vote_count}", file=text_file)
-        print(f"Popular Vote: {popular_vote}", file=text_file)
+        print("Election Results",file=text_file)
+        print("----------------------------",file=text_file)
+        print(f"Total Votes: {str(total_votes)}", file=text_file)
+        print("----------------------------",file=text_file)
+        print(f"The Candidates: {str(unique_candidates)}", file=text_file)
+        print(f"Total Percent: {str(pct_count)}", file=text_file)
+        print(f"Vote Count: {str(vote_count)}", file=text_file)
+        print(f"Popular Vote: {str(popular_vote)}", file=text_file)
 
 Analyze_Data(csv_voter_data)
