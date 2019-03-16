@@ -40,10 +40,10 @@ def Financial_Analysis(budget):
     
     #log to output file
     with open("Output.txt", "w") as text_file:
-        print(f"Total Months: {total_months}", file=text_file)
-        print(f"Total: {currency(total_returns)}", file=text_file)
-        print(f"Average Change: {currency(avg_changes)}", file=text_file)
-        print(f"Greatest Increase: {currency(greatest_profit)}", file=text_file)
-        print(f"Greatest Decrease: {currency(greatest_loss)}", file=text_file)
+        print(f"Total Months: {str(total_months)}", file=text_file)
+        print(f"Total: {str(currency(total_returns))}", file=text_file)
+        print(f"Average Change: {str(currency(avg_changes))}", file=text_file)
+        print(f"Greatest Increase: {str(currency(greatest_profit))}", file=text_file)
+        print(f"Greatest Decrease: {str(currency(greatest_loss))}", file=text_file)
 
 Financial_Analysis(csv_budget)
